@@ -36,3 +36,4 @@ staticfiles/
 .env
 .env.*
 !.env.example
+

@@ -62,3 +62,4 @@ python manage.py test apps.core apps.products apps.customers apps.orders apps.in
 python manage.py runserver 8000
 ```
 API endpoints available at `http://localhost:8000/api/`.
+
