@@ -3,10 +3,10 @@ from django.test import TestCase
 from django.contrib.auth import get_user_model
 from rest_framework.test import APIClient
 from rest_framework import status
-from apps.customers.models import CustomerProfile, Address
-from apps.products.models import Category, Product, ProductVariant, QuantityPriceTier, CustomerSpecialPrice
-from apps.orders.models import Cart, CartItem, Order, OrderItem, OrderStatusHistory, Payment
-from apps.orders.pricing import PricingService
+from ..customers.models import CustomerProfile, Address
+from ..products.models import Category, Product, ProductVariant, QuantityPriceTier, CustomerSpecialPrice
+from .models import Cart, CartItem, Order, OrderItem, OrderStatusHistory, Payment
+from .pricing import PricingService
 
 User = get_user_model()
 
@@ -63,7 +63,7 @@ class UnifiedCartAndCheckoutTests(TestCase):
             price_per_unit=Decimal('105.00')
         )
 
-        from apps.inventory.services import InventoryService
+        from ..inventory.services import InventoryService
         InventoryService.record_stock_in(self.variant_250, 500, reason="Initial test stock")
         InventoryService.record_stock_in(self.variant_500, 500, reason="Initial test stock")
 

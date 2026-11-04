@@ -1,0 +1,15 @@
+{
+  "include": [
+    "."
+  ],
+  "exclude": [
+    "**/__pycache__",
+    "venv",
+    "staticfiles"
+  ],
+  "extraPaths": [
+    "."
+  ],
+  "pythonVersion": "3.12"
+}
+
